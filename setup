@@ -1,0 +1,17 @@
+#!/bin/bash
+
+FULLPATH=$(dirname $(realpath $0))
+
+while read -d $'\0' plist_fullpath; do
+  target_file="$HOME/Library/LaunchAgents/$(basename $plist_fullpath)"
+
+  if [ ! -e ${target_file} ]; then
+    ln -s ${plist_fullpath} $HOME/Library/LaunchAgents
+  elif [ ! -L ${target_file} ]; then
+    echo "ERROR: ${target_file} is not a symlink" >&2
+  fi
+done < <(find $FULLPATH/User/Library/LaunchAgents -mindepth 1 -maxdepth 1 -print0)
+
+# These plist files do not exist on this repository so far
+# ln -s $FULLPATH/System/Library/LaunchAgents/*  /Library/LaunchAgents
+# ln -s $FULLPATH/System/Library/LaunchDaemons/* /Library/LaunchDaemons

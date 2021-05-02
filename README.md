@@ -3,11 +3,7 @@ A collection of launchd plist files on macOS.
 
 ## Setup
 ```shell
-ln -s /path/to/launchd-plists/User/Library/LaunchAgents/* ~/Library/LaunchAgents
-
-# These plist files do not exist on this repository so far
-# (sudo?) ln -s /path/to/launchd-plists/System/Library/LaunchAgents/*  /Library/LaunchAgents
-# (sudo?) ln -s /path/to/launchd-plists/System/Library/LaunchDaemons/* /Library/LaunchDaemons
+./setup
 ```
 
 ## Other information
