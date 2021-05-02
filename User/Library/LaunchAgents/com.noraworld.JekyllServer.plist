@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.noraworld.JekyllServer</string>
+  <key>WorkingDirectory</key>
+  <string>/Users/noraworld/Workspace/developers-blog-content-ja</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/noraworld/.anyenv/envs/rbenv/shims/bundle</string>
+    <string>exec</string>
+    <string>jekyll</string>
+    <string>server</string>
+  </array>
+  <key>StandardOutPath</key>
+  <string>/Users/noraworld/.log/launchd/com.noraworld.JekyllServer.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/noraworld/.log/launchd/com.noraworld.JekyllServer.log</string>
+  <key>RunAtLoad</key>
+  <true/>
+</dict>
+</plist>
